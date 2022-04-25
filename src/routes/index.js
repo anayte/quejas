@@ -10,35 +10,23 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/menu', (req, res) => {
-    res.render('menu');
+    res.render('partials/menu');
 });
 
 router.get('/seguimiento', (req, res) => {
-    res.render('seguimiento');
+    res.render('partials/seguimiento');
 });
 
 router.get('/quejar', (req, res) => {
-    res.render('quejar');
+    res.render('partials/quejar');
+});
+
+router.get('/quejas', (req, res) => {
+    res.render('partials/quejas');
 });
 
 router.get('/verempleados', (req, res) => {
-    res.render('veremepleados');
+    res.render('partials/veremepleados');
 });
-
-/*router.get('/aprobados', (req, res) => {
-    res.render('aprobar');
-});
-
-router.get('/registrar', (req, res) => {
-    res.render('registrar');
-});
-
-router.get('/menu', (req, res) => {
-    res.render('menu');
-});
-
-router.get('/aprobador', (req, res) => {
-    res.render('aprobar');
-});*/
 
 module.exports = router;

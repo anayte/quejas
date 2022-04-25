@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.post('/quejas', async (req, res) => 
 {
-    res.redirect('/quejas');
+    res.redirect('partials/quejas');
     console.log('Ingreso a sitio');
 });
 

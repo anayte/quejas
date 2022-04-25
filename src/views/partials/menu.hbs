@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Menu </title>
-</head>
 <body>
+    
+    <nav class="navbar navbar-dark bg-dark">
+
+        <button onClick="history.back()">
+            Regresar
+        </button>
+
+        <h1>
+            Men&uacute; 
+        </h1>
+        
+    </nav>
 
     <table>
 
         <tr>
             <td>
-                <button> Ver Quejas </button> 
+                <button onclick="window.location.href='/quejas'" > Ver Quejas </button> 
             </td>
 
             <td>
-                <button> Estad&iacute;ticas </button> 
+                <button  honclick="window.location.href='/estadisticas'"> Estad&iacute;ticas </button> 
             </td>
 
             <td>
-                <button> Seguimiento </button> 
+                <button  onclick="window.location.href='/seguimiento'"> Seguimiento </button> 
             </td>
 
         </tr>
