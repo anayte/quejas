@@ -38,6 +38,7 @@ app.use(require('./routes/index'));
 app.use(require('./routes/login'));
 app.use(require('./routes/menu'));
 app.use(require('./routes/quejar'));
+app.use(require('./routes/registrar'));
 app.use(require('./routes/quejas'));
 app.use(require('./routes/seguimiento'));
 app.use(require('./routes/verempleados'));

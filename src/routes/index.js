@@ -29,4 +29,8 @@ router.get('/verempleados', (req, res) => {
     res.render('partials/veremepleados');
 });
 
+router.get('/registrar', (req, res) => {
+    res.render('partials/regcomercios');
+});
+
 module.exports = router;
