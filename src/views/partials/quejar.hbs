@@ -10,6 +10,25 @@
         </h1>
         
     </nav>
+
+     <section class="cheque">
+
+        <form action="/quejar" role="cheque" method="POST">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Ingrese su queja </h3>
+                <input type="text" name="tipo" required placeholder="Tipo de queja:" class="form-control" >
+                <input type="text" name="comercio" required placeholder="Comercio:" class="form-control" >
+                <input type="text" name="queja" required placeholder="Comentario de queja" class="form-control" >
+                <input type="text" name="sugerencia" required placeholder="Comentario de sugerencia" class="form-control" >
+                <input type="date" name="fecha" required placeholder="Fecha" class="form-control" >
+                <!--input type="checkbox" name="remember" value="1" checked /> Remember me -->
+                <button type="submit" name="cheque" class="btn btn-block btn-info"> Enviar a Queja </button>
+            </div>
+        </div>
+        </form>
+
+    </section>
     
 </body>
 </html>
