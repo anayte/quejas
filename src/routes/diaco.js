@@ -1,3 +1,4 @@
+const { query } = require("express");
 const express = require("express");
 const router = express.Router();
 const { MongoClient } = require("mongodb");
@@ -16,6 +17,7 @@ router.post('/diaco', async (req, res) =>
              const database = client.db('bdcli');
              const collection = database.collection('comercios');
              const collection1 = database.collection('regiones');
+             
 
              const ubicacion = await collection1.find().toArray();
              const comerico = await collection.find().toArray();

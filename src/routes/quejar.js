@@ -6,13 +6,16 @@ const { MongoClient } = require("mongodb");
 router.post('/quejar', async (req, res) => 
 {
      // variables 
-     const { tipo, queja, comercio, sugerencia, fecha } = req.body;
+     const { tipo, queja, comercio, departamento, region, municipio, sugerencia } = req.body;
      const tipoq = tipo;
      const com = comercio;
      const quejaq = queja;
      const sugq = sugerencia;
      const hoy = new Date();
      const errors = [];
+     const depto = departamento;
+     const reg = region;
+     const muni = municipio;
  
      const uri ="mongodb+srv://anayte:12345@bdcli.dkohx.mongodb.net/bdcli?retryWrites=true&w=majority";
      const client = new MongoClient(uri);
@@ -30,6 +33,9 @@ router.post('/quejar', async (req, res) =>
              const query= {
                  tipo: tipoq,
                  Comercio: com,
+                 Region: reg,
+                 Departamento: depto,
+                 Municipio: muni,
                  queja: queja,
                  sug: sugerencia,
                  date: hoy };
@@ -41,7 +47,7 @@ router.post('/quejar', async (req, res) =>
              if(validar != null){
                  console.log('Queja agregada');
                  console.log(validar);
-                 res.redirect('/diaco');
+                 res.redirect('/');
              }
              else
              {
