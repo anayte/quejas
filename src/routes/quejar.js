@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { MongoClient } = require("mongodb");
 
+
 router.post('/quejar', async (req, res) => 
 {
      // variables 
@@ -40,7 +41,7 @@ router.post('/quejar', async (req, res) =>
              if(validar != null){
                  console.log('Queja agregada');
                  console.log(validar);
-                 res.redirect('/quejar')
+                 res.redirect('/diaco');
              }
              else
              {

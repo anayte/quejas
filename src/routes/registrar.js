@@ -21,7 +21,7 @@ router.post('/registrocomercio', async (req, res) =>
         const client = new MongoClient(uri);
 
         console.log("ingresa aqui2");
-        
+
         try
         {
             // conectar al cliente 
@@ -32,33 +32,35 @@ router.post('/registrocomercio', async (req, res) =>
             const database = client.db('bdcli');
             const collection = database.collection('comercios');
             console.log("ingresa aqui3");
-            // Query para crear nuevo twit
+            // Query para ingresar queja
             const query = {
                 nombre: nombre,
                 region: region,
                 departamento: departamento,
                 municipio : municipio,
                 fecharegistro: hoy};
+
             const validar = await collection.insertOne(query);
 
             // imprime lo encontrado
             if(validar != null)
             {   console.log("ingresa aqui4");
-                //res.redirect(validar);
+                res.redirect('/registrar');
             }
             else
             {   console.log("ingresa aqui5");
                 console.log(validar);
+                res.redirect('/menu');
              }
         }
         catch (err)
         {  console.log("ingresa aqui6");
             console.log(err);
-           // res.redirect('/signin');
+            res.redirect('/login');
         }
         finally
         {  
-            console.log("ingresa aqui7");
+            console.log("ingresa final");
             // imprime el resultado 
             //run().catch(console.dir);
             // cierra la coneccion 
