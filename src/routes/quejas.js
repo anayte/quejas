@@ -15,17 +15,15 @@ router.post('/quejas', async (req, res) =>
 
         // acceder a la base
         const database = client.db('bdcli');
-        const collection = database.collection('login');
+        const collection = database.collection('quejas');
 
         // Query para encontrar al usuario
-        const query = { usrname: usr, usrpassword: psw, usrstatus:stt};
-        const validar = await collection.findOne(query);
+        const validar = await collection.find().toArray();
 
         // imprime lo encontrado 
         if(validar != null){
-            console.log('Login correcto');
-            req.session.Usuario= validar;
-            res.redirect('/menu');
+            console.log('Busqueda correcta');
+            res.render('partials/quejas', {validar});
         }
         else
         {

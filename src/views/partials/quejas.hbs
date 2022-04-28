@@ -34,21 +34,30 @@
                 <th>
                     Tipo
                 </th>
+                <th>
+                    Region
+                </th>
+                <th>
+                    Departamento
+                </th>
+                <th>Municipio</th>
             </tr>
         </table> 
 
-        {{#each quejas}}
+        {{#each validar}}
 
             <table class="container">
                 <tr>
-                    <select>
-                        {{region}}
-                    </select>
+                    <th class="fechacol" >{{date}}</th>
+
                     <th>
-                        {{comercio}}
+                        {{Comercio}}
                     </th>
                     <th>
                         {{tipo}}
+                    </th>
+                    <th>
+                        {{Region}}
                     </th>
                     <th>
                         {{Departamento}}
