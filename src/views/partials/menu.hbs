@@ -18,7 +18,11 @@
 
         <tr>
             <td>
-                <button onclick="window.location.href='/quejas'" > Ver Quejas </button> 
+                <form action="/quejas" method="POST">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Ver quejas
+                    </button>
+                </form>
             </td>
 
             <td>
@@ -30,7 +34,11 @@
             </td>
 
             <td>
-                <button  onclick="window.location.href='/seguimiento'"> Seguimiento </button> 
+                <form action="/seguimiento" method="POST">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Dar seguimiento
+                    </button>
+                </form>
             </td>
 
         </tr>
