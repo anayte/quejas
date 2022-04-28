@@ -43,6 +43,7 @@ app.use(require('./routes/quejas'));
 app.use(require('./routes/seguimiento'));
 app.use(require('./routes/verempleados'));
 app.use(require('./routes/diaco'));
+app.use(require('./routes/estadisticas'));
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));

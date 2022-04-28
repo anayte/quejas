@@ -33,4 +33,8 @@ router.get('/registrar', (req, res) => {
     res.render('partials/regcomercios');
 });
 
+router.get('/estadisticas', (req, res) => {
+    res.render('partials/estadisticas');
+});
+
 module.exports = router;
