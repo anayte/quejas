@@ -76,7 +76,7 @@
         
     </nav>
 
-     <section class="cheque">
+     <section class=" container card text-white bg-primary mb-3" style="max-width: 20rem;">
 
         <form action="/quejar" role="cheque" method="POST">
         <div class="panel panel-default">
@@ -105,17 +105,15 @@
    					</select>
 					Municipio: <select id="third" name="municipio">						
    					</select>
-                <table class="quejas">
-                    <tr>
-                        <td>
-                            <input type="text" name="queja" required placeholder="Comentario de queja"  class="quejas" class="form-control" >
-                        </td>
-                        <td>
-                            <input type="text" name="sugerencia" required placeholder="Comentario de sugerencia" class="quejas" class="form-control" >
-                        </td>
-                    </tr>
-                </table>
-                <button type="submit" name="cheque" class="btn btn-block btn-info"> Enviar a Queja </button>
+                <div class="form-group">
+                    <label for="exampleTextarea" class="form-label mt-4"> Comentario de queja </label>
+                        <textarea class="form-control" name="queja" id="Comentario de queja" rows="3">  </textarea>
+                    <label for="exampleTextarea" class="form-label mt-4"> Comentario de Sugerencia </label>
+                        <textarea class="form-control" name="sugerencia" id="Comentario de queja" rows="3">  </textarea>                 
+                </div>
+                <!--input type="text" name="queja" required placeholder="Comentario de queja"  class="quejas" class="form-control"-->
+                <button type="submit" name="cheque" class="btn btn-success"> Enviar a Queja </button>
+                <!--input type="text" name="sugerencia" required placeholder="Comentario de sugerencia" class="quejas" class="form-control"-->
             </div>
         </div>
         </form>

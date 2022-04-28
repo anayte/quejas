@@ -18,45 +18,48 @@
     <section class="movimientos">
 
         <form action="/seguimiento" method="POST">
-            <button class="btn btn-primary btn-block" type="submit">
-                Ver lista de quejas
+            <button class="btn btn-success btn-block" type="submit">
+                Actualizar
             </button>
         </form>
         
-        <table  class="container">
-            <tr>
-                <th class="fechacol">
-                    Fecha
-                </th>
-                <th>
-                    Comercio
-                </th>
-                <th>
-                    Tipo
-                </th>
-            </tr>
-        </table> 
-
-        {{#each validar}}
-
-            <table class="container">
-                <tr>
-                    <th>
-                        {{date}}
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-info">
+                    <th scope="col">
+                        Fecha
                     </th>
-                    <th>
-                        {{tipo}}
+                    <th scope="col">
+                        Tipo
                     </th>
-                    <th>
-                        {{Comercio}}
+                    <th scope="col">
+                        Comercio
                     </th>
-                    <th>
-                        {{queja}}
+                    <th scope="col">
+                        Queja 
                     </th>
                 </tr>
-            </table>
+            </thead>
+            {{#each validar}}
+                <tbody>
+                    <tr class="table-primary">
+                        <th scope="col">
+                            {{date}}
+                        </th scope="col">
+                        <th scope="col">
+                            {{tipo}}
+                        </th>
+                        <th scope="col">
+                            {{Comercio}}
+                        </th>
+                        <th scope="col">
+                            {{queja}}
+                        </th>
+                    </tr>
+                </tbody>
+            {{/each}}
 
-        {{/each}}
+        </table>
 
     </section>
 
